@@ -1,0 +1,73 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Demo</servlet-name>
+  	<display-name>Demo</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.first.Demo</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GenericServExample</servlet-name>
+  	<display-name>GenericServExample</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.first.GenericServExample</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletConfigEx</servlet-name>
+  	<display-name>ServletConfigEx</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.first.ServletConfigEx</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletContextEx</servlet-name>
+  	<display-name>ServletContextEx</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.first.ServletContextEx</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CookiesEx</servlet-name>
+  	<display-name>CookiesEx</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.session.CookiesEx</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SecondCookiesEx</servlet-name>
+  	<display-name>SecondCookiesEx</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.session.SecondCookiesEx</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Demo</servlet-name>
+  	<url-pattern>/demo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GenericServExample</servlet-name>
+  	<url-pattern>/gen</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletConfigEx</servlet-name>
+  	<url-pattern>/ServletConfigEx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletContextEx</servlet-name>
+  	<url-pattern>/ServletContextEx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CookiesEx</servlet-name>
+  	<url-pattern>/CookiesEx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SecondCookiesEx</servlet-name>
+  	<url-pattern>/SecondCookiesEx</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+</web-app>
