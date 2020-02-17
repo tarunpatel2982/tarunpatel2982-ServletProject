@@ -40,6 +40,12 @@
   	<description></description>
   	<servlet-class>com.slk.session.SecondCookiesEx</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>loginEx</servlet-name>
+  	<display-name>loginEx</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.login.loginEx</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Demo</servlet-name>
   	<url-pattern>/demo</url-pattern>
@@ -63,6 +69,10 @@
   <servlet-mapping>
   	<servlet-name>SecondCookiesEx</servlet-name>
   	<url-pattern>/SecondCookiesEx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>loginEx</servlet-name>
+  	<url-pattern>/loginEx</url-pattern>
   </servlet-mapping>
   
   
