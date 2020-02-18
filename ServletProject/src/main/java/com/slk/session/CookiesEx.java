@@ -27,6 +27,7 @@ public class CookiesEx extends HttpServlet {
 		Cookie ck = new Cookie("uname", s);
 		resp.addCookie(ck);
 
+		//p.print("check "+ ck);
 		p.print("<form action ='SecondCookiesEx' method='post'>");
 
 		p.print("<input type ='submit' value ='go'>");

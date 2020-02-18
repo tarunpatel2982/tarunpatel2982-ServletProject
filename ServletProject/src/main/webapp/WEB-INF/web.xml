@@ -40,11 +40,78 @@
   	<description></description>
   	<servlet-class>com.slk.session.SecondCookiesEx</servlet-class>
   </servlet>
+  
   <servlet>
   	<servlet-name>loginEx</servlet-name>
   	<display-name>loginEx</display-name>
   	<description></description>
   	<servlet-class>com.slk.login.loginEx</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.login.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ProfileServlet</servlet-name>
+  	<display-name>ProfileServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.login.ProfileServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DemoHidden</servlet-name>
+  	<display-name>DemoHidden</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.hidden.DemoHidden</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DemoHidden2</servlet-name>
+  	<display-name>DemoHidden2</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.hidden.DemoHidden2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DemoUrl</servlet-name>
+  	<display-name>DemoUrl</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.url.DemoUrl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DemoUrl2</servlet-name>
+  	<display-name>DemoUrl2</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.url.DemoUrl2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DemoSession</servlet-name>
+  	<display-name>DemoSession</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.httpsession.DemoSession</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DemoSession2</servlet-name>
+  	<display-name>DemoSession2</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.httpsession.DemoSession2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginHttp</servlet-name>
+  	<display-name>LoginHttp</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.loginHttpSession.LoginHttp</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HttpLogout</servlet-name>
+  	<display-name>HttpLogout</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.loginHttpSession.HttpLogout</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HttpProfile</servlet-name>
+  	<display-name>HttpProfile</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.loginHttpSession.HttpProfile</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>Demo</servlet-name>
@@ -70,14 +137,55 @@
   	<servlet-name>SecondCookiesEx</servlet-name>
   	<url-pattern>/SecondCookiesEx</url-pattern>
   </servlet-mapping>
+ 
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ProfileServlet</servlet-name>
+  	<url-pattern>/ProfileServlet</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>loginEx</servlet-name>
   	<url-pattern>/loginEx</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DemoHidden</servlet-name>
+  	<url-pattern>/DemoHidden</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DemoHidden2</servlet-name>
+  	<url-pattern>/DemoHidden2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DemoUrl</servlet-name>
+  	<url-pattern>/DemoUrl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DemoUrl2</servlet-name>
+  	<url-pattern>/DemoUrl2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DemoSession</servlet-name>
+  	<url-pattern>/DemoSession</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DemoSession2</servlet-name>
+  	<url-pattern>/DemoSession2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginHttp</servlet-name>
+  	<url-pattern>/LoginHttp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HttpLogout</servlet-name>
+  	<url-pattern>/HttpLogout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HttpProfile</servlet-name>
+  	<url-pattern>/HttpProfile</url-pattern>
+  </servlet-mapping>
   
   
-  
-  
-  
-  
-</web-app>
+  </web-app>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Login</title>
+
+	<style type="text/css">
+		form {
+				border: 1px dotted black;
+				margin-left: 40%;
+				width: 300px;
+				height: 150px;
+				padding: 30px;	
+			
+			  }
+		#btnsu
+		{
+				margin-top:10px;
+				
+				border-radius: 10px  ;
+		
+				color:black;
+				box-shadow:5px 5px 5px black;
+				width: 100px;
+				height: 40px;
+		}
+		body {
+	
+				background-color: gray;
+			}
+			
+			.lable
+			{
+				font-size: 20px;
+				text-shadow: 5px 5px 5px white;
+				
+			}
+			.textbox
+			{
+				margin-top:10px;
+				font-size: 15px;
+				
+				border-radius: 10px  ;
+				
+				box-shadow: 5px 5px 5px black;
+			
+			}
+			
+	</style>
+</head>
+<body>
+		<h1>User </h1>
+	<form  action="LoginHttp" method="post">
+		
+		<table>
+			<tr><td><label class="lable">User Name </label></td><td><input class="textbox" type="text" name="uname"></td></tr>
+			<tr><td><label class="lable">Password</label></td><td><input  class="textbox" type="password" name="pass"></td></tr>
+			<tr><td></td><td ><center><input id ="btnsu" type="submit" value="ok"></center></td></tr>
+		</table>
+	</form>
+
+</body>
+</html>
