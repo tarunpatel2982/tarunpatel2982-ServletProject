@@ -113,6 +113,48 @@
   	<description></description>
   	<servlet-class>com.slk.loginHttpSession.HttpProfile</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UserLogin</servlet-name>
+  	<display-name>UserLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.UserLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>NextPage</servlet-name>
+  	<display-name>NextPage</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.NextPage</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserLogout</servlet-name>
+  	<display-name>UserLogout</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.UserLogout</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddBook</servlet-name>
+  	<display-name>AddBook</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.AddBook</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Book2</servlet-name>
+  	<display-name>Book2</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.Book2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteBook</servlet-name>
+  	<display-name>DeleteBook</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.DeleteBook</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateBook</servlet-name>
+  	<display-name>UpdateBook</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.UpdateBook</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Demo</servlet-name>
   	<url-pattern>/demo</url-pattern>
@@ -185,6 +227,34 @@
   <servlet-mapping>
   	<servlet-name>HttpProfile</servlet-name>
   	<url-pattern>/HttpProfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserLogin</servlet-name>
+  	<url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NextPage</servlet-name>
+  	<url-pattern>/NextPage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserLogout</servlet-name>
+  	<url-pattern>/UserLogout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddBook</servlet-name>
+  	<url-pattern>/AddBook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Book2</servlet-name>
+  	<url-pattern>/Book2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteBook</servlet-name>
+  	<url-pattern>/DeleteBook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateBook</servlet-name>
+  	<url-pattern>/UpdateBook</url-pattern>
   </servlet-mapping>
   
   

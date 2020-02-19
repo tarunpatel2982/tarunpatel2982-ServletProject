@@ -6,11 +6,13 @@
 
 	<style type="text/css">
 		form {
-				border: 1px dotted black;
-				margin-left: 40%;
+				
+				margin-top:220px;
 				width: 300px;
 				height: 150px;
-				padding: 30px;	
+				padding: 30px;
+				box-shadow: 1px 1px 300px aqua;	
+				border-radius: 10px;
 			
 			  }
 		#btnsu
@@ -20,7 +22,7 @@
 				border-radius: 10px  ;
 		
 				color:black;
-				box-shadow:5px 5px 5px black;
+				box-shadow:1px 1px 80px white;
 				width: 100px;
 				height: 40px;
 		}
@@ -32,7 +34,7 @@
 			.lable
 			{
 				font-size: 20px;
-				text-shadow: 5px 5px 5px white;
+				text-shadow: 5px 5px 50px black;
 				
 			}
 			.textbox
@@ -42,22 +44,22 @@
 				
 				border-radius: 10px  ;
 				
-				box-shadow: 5px 5px 5px black;
+				box-shadow: 5px 5px 40px black;
 			
 			}
 			
 	</style>
 </head>
 <body>
-		<h1>User </h1>
-	<form  action="LoginHttp" method="post">
+		<center><h1>User </h1></center>
+	<center><form  action="LoginHttp" method="post">
 		
 		<table>
 			<tr><td><label class="lable">User Name </label></td><td><input class="textbox" type="text" name="uname"></td></tr>
 			<tr><td><label class="lable">Password</label></td><td><input  class="textbox" type="password" name="pass"></td></tr>
 			<tr><td></td><td ><center><input id ="btnsu" type="submit" value="ok"></center></td></tr>
 		</table>
-	</form>
+	</form></center>
 
 </body>
 </html>
