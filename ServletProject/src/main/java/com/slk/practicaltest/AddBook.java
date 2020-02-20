@@ -19,17 +19,7 @@ public class AddBook extends HttpServlet {
 	
 	ArrayList<Book> bArrayList= new ArrayList<Book>();
 	
-	protected void pro (HttpServletRequest request ,HttpServletResponse response) throws ServletException, IOException
-	{
-		
-		
 	
-					
-						
-	}
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
@@ -43,14 +33,57 @@ public class AddBook extends HttpServlet {
 
 		String bookAuthor = request.getParameter("bookAuthor");
 		
+		
+		//printWriter.print("test id " + bookId);
+		if(bArrayList.isEmpty())
+		{
+			//printWriter.print("test id " + bookId);
+			if(bookId.equals(""))
+			{
+				printWriter.print("<script>alert('Enter BookId No')</script>");
+				request.getRequestDispatcher("AddBook.html").include(request, response);
+				//printWriter.print("if this");
+			}
+			else
+			{
+				//printWriter.print("test Array " + bArrayList);
+				bArrayList.add(new Book(bookId,bookName,bookPrice,bookAuthor));
+
+				HttpSession httpSession = request.getSession();
+				httpSession.setAttribute("arraylist", bArrayList);
+				request.getRequestDispatcher("AddBook.html").include(request, response);
+				printWriter.print("<script>alert('===>>> Sucessfully Add data ')</script>");
+			}
+			
+		}
+		else
+		{
+				for (Book book : bArrayList) {
+					String s=book.getBookId();
+					
+					//printWriter.print("test id " + s);
+					if(!bookId.equals(s) &&  bookId !="")
+					{
 						bArrayList.add(new Book(bookId,bookName,bookPrice,bookAuthor));
 
 						HttpSession httpSession = request.getSession();
 						httpSession.setAttribute("arraylist", bArrayList);
-					
 						request.getRequestDispatcher("AddBook.html").include(request, response);
+						printWriter.print("<script>alert('===>>> Sucessfully Add data ')</script>");
 						
-			
+					}
+					else
+					{
+						printWriter.print("<script>alert('===>>> Enter Valid BookId No ')</script>");
+//							printWriter.print("Not Valid Record !!!!!");
+							request.getRequestDispatcher("AddBook.html").include(request, response);
+					}
+					
+					
+				}
+
+		}
+
 		
 	}
 

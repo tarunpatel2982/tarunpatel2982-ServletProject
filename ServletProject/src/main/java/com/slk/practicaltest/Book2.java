@@ -27,11 +27,12 @@ public class Book2 extends HttpServlet {
 		
 		///request.getRequestDispatcher("BookManagement.html").include(request, response);
 		ArrayList<Book> arrayList = (ArrayList<Book>) session.getAttribute("arraylist");
+		outPut.print("<html>");
+		outPut.print("<link rel='stylesheet' href='comman.css'>");
+		outPut.print("<h1 class='tb1'><a href='AddBook.html'>Add Book</a></h1>");
+		
 		outPut.print("");
-		outPut.print("");
-		outPut.print("");
-		outPut.print("");
-		outPut.print("<table style='border: 1px solid black;'>");
+		outPut.print("<table style='border: 1px solid black;margin-left: 45%;margin-top: 2px;' >");
 		outPut.print("<tr><th>ID </th><th>Book Name </th><th>Book Price </th><th>Book Author </th><th>Action</th></tr>");
 		String bookId = null;
 		for (Book book : arrayList) {
@@ -55,6 +56,8 @@ public class Book2 extends HttpServlet {
 		}
 		
 		outPut.print("</table>");
+		
+		outPut.print("</html>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

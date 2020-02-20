@@ -28,24 +28,42 @@ public class UserLogin extends HttpServlet {
 
 		String userPassword = request.getParameter("userPassword");
 		
-		
+		outPut.print("<html>");
 		if(userPassword.equals("123") && userName.equals("tarun"))
 		{
-			outPut.print("wellcome : " + userName);
+		
+			//outPut.print("wellcome : " + userName);
+		
+			
+			outPut.print("<link rel='stylesheet' href='com.css'>");
+			outPut.print("<body>");
+			outPut.print("<div class='topnav'>");
+			outPut.print("<a class='active' href='#home'>Home</a><a href='NextPage'>Profile</a> ");
+			outPut.print(" <div class='login-container'>");
+			outPut.print("<form action='UserLogout'>");
+			outPut.print(" <button type='submit'>Logout</button>");
+			outPut.print("</form>");
+			outPut.print("</div>");
+			outPut.print(" </div>");
+			
+			
+			
+			outPut.print("<h1 class = 'val'> Home </h1>");
+			outPut.print("</body>");
+		
 			
 			HttpSession session = request.getSession();
 						session.setAttribute("userName", userName);
-						outPut.print("<br>");	
-						outPut.print("<h1><a href='NextPage'>Next Page </a></h1>");
-			
-			Cookie cookie = new Cookie("userName", userName);
-			
-			response.addCookie(cookie);
+						 session.setMaxInactiveInterval(30); // 30 seconds
+//			Cookie cookie = new Cookie("userName", userName);
+//			
+//			response.addCookie(cookie);
 		}else
 		{
-			outPut.print("UserName And Password Wrong !!!!! ");
+			outPut.print("<script>alert('UserName && Password Wrong !!!!!!!!');</script> ");
 			request.getRequestDispatcher("Userlogin.html").include(request, response);
 		}
+		outPut.print("</html>");
 		outPut.close();
 	}
 

@@ -155,6 +155,12 @@
   	<description></description>
   	<servlet-class>com.slk.practicaltest.UpdateBook</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UpdateBookData</servlet-name>
+  	<display-name>UpdateBookData</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.practicaltest.UpdateBookData</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Demo</servlet-name>
   	<url-pattern>/demo</url-pattern>
@@ -255,6 +261,10 @@
   <servlet-mapping>
   	<servlet-name>UpdateBook</servlet-name>
   	<url-pattern>/UpdateBook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateBookData</servlet-name>
+  	<url-pattern>/UpdateBookData</url-pattern>
   </servlet-mapping>
   
   

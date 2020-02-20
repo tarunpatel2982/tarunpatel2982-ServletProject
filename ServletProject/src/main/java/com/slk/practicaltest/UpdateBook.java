@@ -35,7 +35,7 @@ public class UpdateBook extends HttpServlet {
 					String bookId1=book.getBookId();
 					
 					
-					if(bookId1.equals(del))
+					if(del.equals(bookId1))
 					{
 						String bookName= book.getBookName();
 
@@ -43,11 +43,23 @@ public class UpdateBook extends HttpServlet {
 
 						String bookAuthor= book.getBookAuthor();
 						
+						outPut.print("<html>");
 						
-						outPut.print("test " + bookAuthor);
+						outPut.print("<form  method='get' action='UpdateBookData' style='margin-left: 42%;margin-top: 22%;'>");
+						outPut.print("<table>");
+						outPut.print("<input type='hidden' name='bookId' value='" + bookId1 + "'>");
+						outPut.print("<tr><td><label>Book Name </label></td><td><input type='text' name='bookName' value='"+ bookName+"'placeholder='Enter Book Name'></td></tr>");
+						outPut.print("<tr><td><label>Book Price </label></td><td><input type='text' name='bookPrice' value='"+ bookPrice+"'placeholder='Enter Book Name'></td></tr>");
+						outPut.print("<tr><td><label>Author Name </label></td><td><input type='text' name='bookAuthor' value='"+ bookAuthor+"'placeholder='Enter Book Name'></td></tr>");
 						
-						
-						
+						outPut.print("<table>");
+						outPut.print("");
+						outPut.print("");
+						outPut.print("");
+						outPut.print("<input type='submit' value='Update'>");
+						outPut.print("</form>");
+						outPut.print("");
+						outPut.print("</html>");
 					}	
 				}
 			

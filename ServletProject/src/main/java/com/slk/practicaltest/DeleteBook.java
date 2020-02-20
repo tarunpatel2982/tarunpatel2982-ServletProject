@@ -46,6 +46,7 @@ public class DeleteBook extends HttpServlet {
 					{
 						//outPut.print("test id  " + bookId1);
 						array.remove(book);
+						outPut.print("<script>alert('===>>> Delete Record  ')</script>");
 						//outPut.print("sucessfully Delete !!!!");
 						request.getRequestDispatcher("Book2").include(request, response);
 					

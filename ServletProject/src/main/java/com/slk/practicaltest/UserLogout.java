@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,13 +24,23 @@ public class UserLogout extends HttpServlet {
 		response.setContentType("text/html");
 		
 		PrintWriter outPut = response.getWriter();
+		//Cookie ck = new Cookie("userName", "");
+		HttpSession httpSession = request.getSession();
 		
-		HttpSession session = request.getSession();
-		
-					session.invalidate();
-					outPut.print("User sucessfully Logout ............... ");
-					
-					request.getRequestDispatcher("Userlogin.html").include(request, response);
+		if(httpSession!=null)
+		{
+			
+			httpSession.removeAttribute("userName");
+			httpSession.getMaxInactiveInterval();
+			outPut.print("<script>alert('User Logout!!!!!!!!!!!!');</script> ");
+			
+			
+			request.getRequestDispatcher("Userlogin.html").include(request, response);
+
+		}
+//		httpSession.invalidate();
+//		ck.setMaxAge(0);
+//		response.addCookie(ck);
 		
 		
 	}

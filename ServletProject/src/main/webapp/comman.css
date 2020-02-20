@@ -1,0 +1,11 @@
+@charset "UTF-8";
+td
+  {
+	border: 1px solid black;
+  }
+	
+.tb1
+  {
+	margin-left: 48%;
+	margin-top: 20%;
+  }
