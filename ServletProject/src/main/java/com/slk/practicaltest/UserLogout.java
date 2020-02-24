@@ -17,32 +17,38 @@ public class UserLogout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
-		
+
 		PrintWriter outPut = response.getWriter();
-		//Cookie ck = new Cookie("userName", "");
+		// Cookie ck = new Cookie("userName", "");
 		HttpSession httpSession = request.getSession();
-		
-		if(httpSession!=null)
-		{
-			
+		Auth obj= (Auth) httpSession.getAttribute("userObj");
+		if (obj.logedin==true) {
+
+			obj.setLogedin(false);
 			httpSession.removeAttribute("userName");
 			httpSession.getMaxInactiveInterval();
 			outPut.print("<script>alert('User Logout!!!!!!!!!!!!');</script> ");
-			
-			
+
 			request.getRequestDispatcher("Userlogin.html").include(request, response);
 
+		}
+		else
+		{
+			outPut.print("<script>alert('User Logout!!!!!!!!!!!!');</script> ");
+
+			request.getRequestDispatcher("Userlogin.html").include(request, response);
 		}
 //		httpSession.invalidate();
 //		ck.setMaxAge(0);
 //		response.addCookie(ck);
-		
-		
+
 	}
 
 }
