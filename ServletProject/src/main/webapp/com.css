@@ -88,6 +88,9 @@
 .topnav .login-container {
   float: right;
 }
+.topnav .logout-container {
+  float: left;
+}
 
 /* Style the input field inside the navbar */
 .topnav input[type=text] {
@@ -109,8 +112,20 @@
   border: none;
   cursor: pointer;
 }
+.topnav .logout-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
 
 .topnav .login-container button:hover {
   background: #ccc;
 }
-
+.topnav .logout-container button:hover {
+  background: #ccc;
+}

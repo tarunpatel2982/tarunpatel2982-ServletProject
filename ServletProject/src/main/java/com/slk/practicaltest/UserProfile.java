@@ -38,11 +38,11 @@ public class UserProfile extends HttpServlet {
 				outPut.print("<link rel='stylesheet' href='com.css'>");
 				outPut.print("<div class='topnav'>");
 				//outPut.print("<a class='active' href='UserLogin'>Home</a>");
-				
+				outPut.print(" <div class='logout-container'>");
 				outPut.print("<form action='Home' method='post'>");
 				outPut.print(" <button type='submit'>Home</button>");
 				outPut.print("</form>");
-				
+				outPut.print("</div>");
 				outPut.print(" <div class='login-container'>");
 				outPut.print("<form action='UserLogout' method='post'>");
 				outPut.print(" <button type='submit'>Logout</button>");

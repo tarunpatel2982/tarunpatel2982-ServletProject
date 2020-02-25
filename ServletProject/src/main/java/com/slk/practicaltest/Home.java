@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.tomcat.util.codec.binary.StringUtils;
 
 /**
  * Servlet implementation class UserLogin
@@ -33,8 +32,8 @@ public class Home extends HttpServlet {
 		
 
 		boolean logedin = false;
+		Auth auth = new Auth(logedin,userName);
 		
-		Auth auth =new Auth(logedin, userName);
 		auth.setUserName(userName);
 		auth.setLogedin(false);
 		HttpSession session = request.getSession();
