@@ -163,6 +163,24 @@
   	<description></description>
   	<servlet-class>com.slk.practicaltest.Home</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>userPage</servlet-name>
+  	<display-name>userPage</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.Loginexample.userPage</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserLoginHome</servlet-name>
+  	<display-name>UserLoginHome</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.Loginexample.UserLoginHome</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserRegister</servlet-name>
+  	<display-name>UserRegister</display-name>
+  	<description></description>
+  	<servlet-class>com.slk.Loginexample.UserRegister</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Demo</servlet-name>
   	<url-pattern>/demo</url-pattern>
@@ -269,6 +287,18 @@
   <servlet-mapping>
   	<servlet-name>Home</servlet-name>
   	<url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>userPage</servlet-name>
+  	<url-pattern>/userPage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserLoginHome</servlet-name>
+  	<url-pattern>/UserLoginHome</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserRegister</servlet-name>
+  	<url-pattern>/UserRegister</url-pattern>
   </servlet-mapping>
   
   
